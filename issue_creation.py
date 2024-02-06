@@ -9,6 +9,8 @@ headers = {
     "Content-Type": "application/json"
 }
 
+summary_text = "Create jenkins file and run python file via vscode"
+description_text = "Creating jenkins file and call python file to run the code and create issue in Jira. Push both files in Github and trigger the Jenkins File from Jenkins."
 payload = json.dumps(
     {
         "fields": {
@@ -16,23 +18,9 @@ payload = json.dumps(
             {
                 "key": "DEV"
             },
-            "summary": "Create jenkins file and run python file by referring",
-            "description": {
-                "type": "doc",
-                "version": 1,
-                "content": [
-                    {   
-                        "type": "paragraph",
-                        "content":[
-                            {
-                        "type": "text",
-                        "text": "Creating jenkins file and call python file to run the code and create issue in Jira. Push both files in Github and trigger the Jenkins File from Jenkins."
-                    }
-
-                ]
-            }
-                ]
-            },
+            "summary": summary_text,
+            "description": description_text,
+            
             "issuetype": {
                 "name": "Task"
             }
@@ -41,5 +29,5 @@ payload = json.dumps(
     }
 )
 
-response = requests.post(url,headers=headers,data=payload,auth=("gunjanpnd8@gmail.com","ATATT3xFfGF06xFt7Ei2JRG7WjjUNxnJgtKeRBkUjgkS5Wm-TcnoPgrp5D471l58a4xzALIg1N414K1SOr8OFGLU-JF6c4z3c23lEhvjyi3cIqC1AjWHrdPj47qlzQtpEjXdhUQJJPsJv8hBt86FwfZUtDKHT-ekJUn7tOiBT5J-YfoQMmRwUXE=AC376B91"))
+response = requests.post(url,headers=headers,data=payload,auth=("gunjanpnd8@gmail.com","ATATT3xFfGF0GVICEM2G3Gs5xtFNfi41WsJAm4GKPlQI_fGYMVXwNk2QuPS-k-YmNP8x0LsRHK6zQXyio9DIo1Mdx9IOBDzB6TRtjYf-n1HRXC-hUIiFR6yRRKMP1JzS_-z51ppDwLGB0zEqOdDaDeggQJ0NF3WzCeoENE5ghzyPDbwiJm0iRmM=5F9D0D6A"))
 print(response.text)

@@ -3,7 +3,6 @@ pipeline {
 
     stages {
         
-
         stage('Run Python Script') {
             steps {
                 // Run your Python script
