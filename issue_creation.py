@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 
-url = "https://gunjandemo.atlassian.net/rest/api/3/issue"
+url = "https://gunjandemo.atlassian.net/rest/api/2/issue"
 headers = {
     "Accept": "application/json",
     "Content-Type": "application/json"
