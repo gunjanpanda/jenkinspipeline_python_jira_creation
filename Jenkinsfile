@@ -8,7 +8,7 @@ pipeline {
             steps {
                 // Run your Python script
                 script {
-                    sh 'python issue_creation.py'
+                    sh 'python3 issue_creation.py'
                 }
             }
         }
